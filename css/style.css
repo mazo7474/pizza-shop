@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    height: 100vh;
+    background-image: url('../images/1a3e8276fed9ff6ef5bfa55a276ef749.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-transform:uppercase;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'arial';
+}
+
+header{
+    margin-top: 20px;
+    display: flex;
+}
