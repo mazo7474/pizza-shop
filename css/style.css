@@ -68,3 +68,9 @@ header .logo img{
     padding-bottom:30px;
     font-weight: 400;
 }
+
+.main p{
+    font-size: 2em;
+    color:rgba(12, 8, 8, 0.753);
+    font-weight: 100;
+}
