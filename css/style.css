@@ -92,3 +92,26 @@ header .logo img{
     transform: rotate(5deg);
     transition: all 0.2s ease-in-out;
 }
+
+.card-title{
+    text-align: center;
+    color: green;
+    font-weight: 800;
+    font-size: 2em;
+}
+
+.controls-top h2{
+    color: rgb(5, 172, 5);
+    padding-top: 40px;
+    padding-bottom:20px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.col-md-4{
+    border-radius: 10%;
+    padding: 10px;
+    margin-left: 100px;
+    display: flex;
+
+}
