@@ -28,3 +28,10 @@ header nav{
     margin-right: 40px;
     align-items: center;
 }
+
+header nav a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color:white;
+    font-weight: 800;
+}
