@@ -71,7 +71,7 @@ header .logo img{
 
 .main p{
     font-size: 2em;
-    color:rgba(12, 8, 8, 0.753);
+    color:whitesmoke;
     font-weight: 100;
 }
 
@@ -83,4 +83,11 @@ header .logo img{
     margin-top: 40px;
     color:greenyellow;
     text-decoration: none;
+}
+
+.button:hover{
+    background-color:greenyellow;
+    border-color:greenyellow;
+    transform: rotate(5deg);
+    transition: all 0.2s ease-in-out;
 }
