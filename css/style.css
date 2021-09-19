@@ -55,3 +55,9 @@ header .logo img{
     align-items: center;
     justify-content: center;
 }
+
+.main h1{
+    font-size: 5em;
+    color:whitesmoke;
+    padding: 50px;
+}
