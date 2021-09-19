@@ -5,7 +5,7 @@
 
 #header{
     height: 100vh;
-    background-image: url('../images/download\ \(1\).jpeg');
+    background-image: url('../images/hot-pizza.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     text-transform:uppercase;
@@ -73,4 +73,12 @@ header .logo img{
     font-size: 2em;
     color:rgba(12, 8, 8, 0.753);
     font-weight: 100;
+}
+
+.button{
+    width: 250px;
+    padding:20px 15px;
+    border:2px solid yellow;
+    border-radius: 5px;
+    margin-top: 40px;
 }
