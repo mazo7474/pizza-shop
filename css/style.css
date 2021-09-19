@@ -41,6 +41,7 @@ header .logo{
     width: 150px;
     height: 150px;
     flex: 0 1 150px;
+    margin-left: 40px;
 }
 
 header .logo img{
