@@ -5,7 +5,7 @@
 
 #header{
     height: 100vh;
-    background-image: url('../images/1a3e8276fed9ff6ef5bfa55a276ef749.jpg');
+    background-image: url('../images/download\ \(1\).jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     text-transform:uppercase;
@@ -41,4 +41,9 @@ header .logo{
     width: 150px;
     height: 150px;
     flex: 0 1 150px;
+}
+
+header .logo img{
+    height: 150px;
+    width: 150px;
 }
