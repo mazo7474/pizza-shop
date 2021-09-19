@@ -36,3 +36,9 @@ header nav a{
     font-weight: 1000px;
     font-size:larger;
 }
+
+header .logo{
+    width: 150px;
+    height: 150px;
+    flex: 0 1 150px;
+}
