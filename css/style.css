@@ -81,4 +81,6 @@ header .logo img{
     border:2px solid yellow;
     border-radius: 5px;
     margin-top: 40px;
+    color:greenyellow;
+    text-decoration: none;
 }
