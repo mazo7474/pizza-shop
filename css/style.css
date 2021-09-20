@@ -115,3 +115,30 @@ header .logo img{
     display: flex;
 
 }
+
+.control h2{
+    font-size: 3em;
+}
+
+h2{
+    font-size: 1em;
+    font-weight: bolder;
+    align-items: center;
+    display: flex;
+}
+
+.order-overlay{
+    background-color: bisque;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left:2%;
+    margin-right: 2%;
+    padding-bottom: 20px;
+    padding-left: 2%;
+}
+
+.col-sm-5{
+    padding: 20px;
+}
+
+
