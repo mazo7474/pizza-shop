@@ -5,12 +5,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
-        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        
     </head>
     <body>
         <section id="header">
@@ -74,39 +74,157 @@
                 </div>
          </section>
          
-         <section class="order" id="order">
-            <h1 class="kichwa"><span>Order</span>Now</h1>
-
-            <div>
-
-              <div class="image">
-                <img src="images/pizza-delivery-man.jpg" alt="">
+         
+          <div id="order"></div>
+          <div class="order mt-4">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-12">
+                          <div id="order-section"></div>
+                          <h1 class="text-center pt-4"> Make an order</h1>
+                          <p>To buy more than one Pizza, Make another selection then press order now to add to the first order
+                          </p>
+                          <div class="alert alert-success mt-2" id="success">
+                              <strong>Success!</strong> your order will be delivered to your location in
+                              <span style="color: red; font-size:18px" id="place"></span> the delivery fee is ksh 200. Thank you for shopping with us.
+                          </div>
+                          <div class="alert alert-success" id="no-delivery">
+                              <strong>Success!</strong> We will be waiting for you to pick your pizza. Thank you for shopping with us.
+                          </div>
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <div class="card">
+                                      <card-title>
+                                          <h3 class="pt-4 pl-5">Let us know what you want</h3>
+                                      </card-title>
+                                      <div class="card-body">
+                                          <div id="pizza">
+                                              <img class="pl-5" src="./assets/pizza1.jpeg" alt="" />
+                                          </div>
+                                          <form id="myform">
+                                              <div class="form-group">
+                                                  <label for="pizza-size">Pizza Size</label>
+                                                  <select class="form-control" id="pizza-size">
+                                                      <option value="small">Small -- ksh 600</option>
+                                                      <option value="medium">Medium -- ksh 800</option>
+                                                      <option value="large"> Large -- ksh 1200</option>
+                                                  </select>
+                                            </div>
+                                              <div class="form-group">
+                                                  <label for="pizza-crust">Which crust do you want</label>
+                                                  <select class="form-control" id="pizza-crust">
+                                                      <option value="crispy">Crispy -- ksh 300</option>
+                                                      <option value="stuffed">Stuffed -- ksh 200</option>
+                                                      <option value="gluten-free">
+                                                          Gluten-free -- ksh 100</option>
+                                                  </select>
+                                              </div>
+                                              <p>Toppings</p>
+                                              <div class="toppings">
+                                                  <div class="form-check form-check-inline">
+                                                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="pepperoni" />
+                                                      <label class="form-check-label" for="inlineCheckbox1">Pepperoni ksh.
+                                                          100</label>
+                                                  </div>
+                                                  <div class="form-check form-check-inline">
+                                                      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="veges" />
+                                                      <label class="form-check-label" for="inlineCheckbox2">Veges ksh.
+                                                          50</label>
+                                                  </div>
+                                                  <div class="form-check form-check-inline">
+                                                      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="bacon" />
+                                                      <label class="form-check-label" for="inlineCheckbox2">Bacon ksh
+                                                          75</label>
+                                                  </div>
+                                              </div>
+                                              <button type="submit" class="btn-success btn mt-3" id="orderbtn">
+                                                  Order now
+                                              </button>
+                                          </form>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-6">
+                                  <div class="card mt-1">
+                                      <div class="card-title d-inline-flex">
+                                          <h3 class="p-4">View items in cart</h3>
+                                          <i class="p-4 fa fa-shopping-cart total"><button class="btn-success btn ml-2"
+                                                  value="0" id="quantity">
+                                                  0
+                                              </button></i>
+                                      </div>
+                                      <div class="card-body">
+                                          <table id="table">
+                                              <tr>
+                                                  <td>Size</td>
+                                                  <td>Crust</td>
+                                                  <td>Toppings</td>
+                                                  <td>Total Price</td>
+                                              </tr>
+                                          </table>
+      
+                                          <div id="cart">
+                                              <img id="cart" src="img/shopping cart.png" alt="" />
+                                              <p class="text-center pt-4">
+                                                  You do not have any item in the cart
+                                              </p>
+                                          </div>
+      
+                                          <div id="items"></div>
+                                          <a href="#order-section">
+                                              <div class="checkout">
+                                                  <button class="btn-success btn m-4" data-toggle="modal" data-target="#exampleModalCenter" id="gettotal">
+                                                      Checkout
+                                                  </button>
+                                              </div>
+                                          </a>
+                                          <!-- </a> -->
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
-
+          </div>
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalLongTitle">
+                            Confirm the price
+                        </h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Amount you are to pay for your order is ksh
+                            <span id="money" style="color: red"></span>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="myModel" data-dismiss="modal">
+                            Confirm checkout
+                        </button>
+    
+                    </div>
+                </div>
             </div>
+            <br>
+            <br>
+            <br>
+            <section> 
+                <footer class="footer text-faded text-center py-5">
+                <div class="container">
+                    <p class="m-0 small">Copyright &copy; pizza-shop 2021</p>
+                </div>
+                </footer>
+            </section>
+            
 
-            <form action="">
-
-              <div class="inputBox">
-                <input type="text" placeholder="name">
-                <input type="email" placeholder="email">
-              </div>
-
-              <div class="inputBox">
-                <input type="number" placeholder="number">
-                <input type="text" placeholder="food name">
-              </div>
-
-              <textarea placeholder="address" name="" id="" cols="30" rows="10"></textarea>
-              
-              <input type="submit" value="Order now" class="btn">
-
-            </form>
-
-
-
-         </section>
-
-        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     </body>
 </html>
